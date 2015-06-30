@@ -1,0 +1,12 @@
+<form action="/calcular" method="post">
+	<input type="hidden" name="operacao" value="<%- operacao %>" />
+	<label>Número 1:</label>
+	<input ng-model="numero1" id = "numero1" type="text" class="input-small ng-valid ng-touched ng-dirty">
+	<label>Número 2:</label>
+	<input ng-model="numero2" id = "numero2" type="text" class="input-small ng-valid ng-touched ng-dirty">
+	<button ng-click="doAddition()" id="calc" class="calc">Calcular</button>
+</form>
+
+<% if(typeof(resultado) != 'undefined') { %>
+	<p id = "resultado">O resultado é <%= resultado %>.</p>
+<% } %>
